@@ -38,7 +38,7 @@ RUN cd mmdetection
 RUN git checkout v2.24.1 
 RUN pip install -r requirements/build.txt
 RUN python setup.py develop
-cd ..
+RUN cd ..
 RUN git clone  https://github.com/open-mmlab/mmdetection3d.git
 RUN cd mmdetection3d
 RUN git checkout v0.17.1 
