@@ -44,6 +44,6 @@ RUN cd mmdetection3d
 RUN git checkout v0.17.1 
 RUN pip install -r requirements/build.txt
 RUN python setup.py develop
-cd ..
+RUN cd ..
 
 COPY ./fonts/* /opt/conda/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/
