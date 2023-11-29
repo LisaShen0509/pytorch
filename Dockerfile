@@ -30,7 +30,7 @@ RUN pip install six
 RUN pip install terminaltables
 RUN pip install tqdm
 RUN pip install scikit-learn
-RUN apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys A4B469963BF863CC
+RUN apt-key adv --keyserver OpenPGP Keyserver --recv-keys A4B469963BF863CC
 RUN apt-get update && apt-get install -y libgl1-mesa-glx
 RUN cd mmdetection
 RUN git checkout v2.24.1 
