@@ -17,7 +17,5 @@ RUN pip install flake8==3.9.2
 RUN pip install importlib-metadata==4.4
 RUN pip install mmengine
 RUN apt-key adv --keyserver hkp://pgp.mit.edu --recv-keys A4B469963BF863CC
-RUN apt-get update
-RUN apt install libgl1-mesa-glx
-RUN apt --fix-broken install
+RUN apt-get update && apt-get install -y libgl1-mesa-glx
 COPY ./fonts/* /opt/conda/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/
