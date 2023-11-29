@@ -2,7 +2,6 @@ FROM pytorch/pytorch:1.9.1-cuda11.1-cudnn8-devel
 RUN pip install --upgrade pip
 RUN pip install mmcv-full==1.4.0 -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.9/index.html
 RUN pip install mmcv==2.0.0rc4 -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.9/index.html
-RUN apt-get update && apt-get install -y libgl1-mesa-glx
 RUN pip install mmsegmentation==0.20.2
 RUN pip install opencv-python-headless
 RUN pip install ninja
