@@ -1,5 +1,4 @@
 FROM pytorch/pytorch:1.9.1-cuda11.1-cudnn8-devel
-
 RUN pip install "mmcv-full>=2.0.0rc4,<2.2.0"
 RUN pip install mmsegmentation==0.20.2
 RUN pip install opencv-python-headless
