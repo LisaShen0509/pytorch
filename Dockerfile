@@ -30,12 +30,11 @@ RUN pip install six
 RUN pip install terminaltables
 RUN pip install tqdm
 RUN pip install scikit-learn
-RUN cd mmdetection
+WORKDIR mmdetection
 RUN git checkout v2.24.1 
 RUN pip install -r requirements/build.txt
 RUN python setup.py develop
-RUN cd ..
-RUN cd mmdetection3d
+WORKDIR mmdetection3d
 RUN git checkout v0.17.1 
 RUN pip install -r requirements/build.txt
 RUN python setup.py develop
