@@ -32,4 +32,18 @@ RUN pip install tqdm
 RUN pip install scikit-learn
 RUN apt-key adv --keyserver OpenPGP Keyserver --recv-keys A4B469963BF863CC
 RUN apt-get update && apt-get install -y libgl1-mesa-glx
+
+RUN git clone https://github.com/open-mmlab/mmdetection.git
+RUN cd mmdetection
+RUN git checkout v2.24.1 
+RUN pip install -r requirements/build.txt
+RUN python setup.py develop
+cd ..
+RUN git clone  https://github.com/open-mmlab/mmdetection3d.git
+RUN cd mmdetection3d
+RUN git checkout v0.17.1 
+RUN pip install -r requirements/build.txt
+RUN python setup.py develop
+cd ..
+
 COPY ./fonts/* /opt/conda/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/
