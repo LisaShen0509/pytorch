@@ -17,26 +17,10 @@ RUN pip install yapf==0.31.0
 RUN pip install flake8==3.9.2
 RUN pip install importlib-metadata==4.4
 RUN pip install mmengine
-RUN pip install cython
-RUN pip install numpy
-RUN pip install cityscapesscripts
-RUN pip install fairscale
-RUN pip install imagecorruptions
-RUN pip install matplotlib
-RUN pip install pycocotools
-RUN pip install scipy
-RUN pip install shapely
-RUN pip install six
-RUN pip install terminaltables
-RUN pip install tqdm
-RUN pip install scikit-learn
-WORKDIR mmdetection
-RUN git checkout v2.24.1 
+WORKDIR mmdetection 
 RUN pip install -r requirements/build.txt
 RUN python setup.py develop
 WORKDIR mmdetection3d
-RUN git checkout v0.17.1 
-RUN pip install -r requirements/build.txt
 RUN python setup.py develop
 
 COPY ./fonts/* /opt/conda/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/
