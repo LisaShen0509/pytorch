@@ -17,10 +17,8 @@ RUN pip install yapf==0.31.0
 RUN pip install flake8==3.9.2
 RUN pip install importlib-metadata==4.4
 RUN pip install mmengine
-WORKDIR mmdetection 
-RUN pip install -r requirements/build.txt
-RUN python setup.py develop
-WORKDIR mmdetection3d
-RUN python setup.py develop
+RUN pip install -r mmdetection/requirements/build.txt
+RUN python mmdetection/setup.py develop
+RUN python mmdetection3d/setup.py develop
 
 COPY ./fonts/* /opt/conda/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/
