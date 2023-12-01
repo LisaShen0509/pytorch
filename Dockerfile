@@ -9,7 +9,6 @@ RUN pip install pycocotools
 RUN pip install numba
 RUN pip install lyft_dataset_sdk
 RUN pip install nuscenes-devkit
-RUN pip install open3d
 RUN pip install plyfile
 RUN pip install scipy
 RUN pip install scikit-image
